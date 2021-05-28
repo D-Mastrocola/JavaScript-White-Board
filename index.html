@@ -2,23 +2,36 @@
 <html>
   <head>
     <title>Paint</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="main.js" defer></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="toolbar">
-      <div id="brushes">
-        <div class="brush" id="circle" onclick="setBrushType('CIRCLE')">Circle</div>
-        <div class="brush" id="square" onclick="setBrushType('SQUARE')">Square</div>
-        <div class="brush" id="erase" onclick="setBrushType('ERASE')">Erase</div>
-        
-        <input type="range" min="1" max="500" value="25" class="slider" id="brush-size"/>
+    <header>
+      <nav id="brushes">
+        <div class="brush" id="circle" onclick="setBrushType('CIRCLE')">
+        </div>
+        <div class="brush" id="square" onclick="setBrushType('SQUARE')">
+        </div>
+        <div class="brush" id="erase" onclick="setBrushType('ERASER')">
+        </div>
         <p>Size: <span id="brush-size-output"></span></p>
-        <input type="color" id='color-picker' value="#ff0000"/>
-        Random Colors<input type="checkbox" id="random-colors"/>
-        
-      </div>
-    </div>
-    <canvas id="artboard"></canvas>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="25"
+          class="slider"
+          id="brush-size"
+        />
+
+        <input type="color" id="color-picker" value="#ff0000" />
+      </nav>
+    </header>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.js"
+      integrity="sha512-a5hlZKgpC1LVAuKgVeXdP0D9Yfacj0hLtNdzx9zFMkIWRrQyO37KtIPiqArGmVuaBYu3ON6Vt0N3+G/JaLXQYQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
